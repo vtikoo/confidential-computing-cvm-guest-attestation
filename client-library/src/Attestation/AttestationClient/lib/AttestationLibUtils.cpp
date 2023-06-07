@@ -57,11 +57,11 @@ static inline AttestationResult LogErrorAndGetResult(const AttestationResult::Er
 namespace attest {
 
 PcrList GetAttestationPcrList() {
-    #ifdef PLATFORM_UNIX
-        attest::PcrList list{0, 1, 2, 3, 4, 5, 6, 7};
-    #else
+    // #ifdef PLATFORM_UNIX
+    //     attest::PcrList list{0, 1, 2, 3, 4, 5, 6, 7};
+    // #else
         attest::PcrList list{0, 1, 2, 3, 4, 5, 6, 7, 11, 12, 13, 14};
-    #endif
+    //#endif
     return list;
 }
 
